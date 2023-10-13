@@ -49,7 +49,7 @@ func (v *vue) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, msg, code)
 		return
 	}
-	http.ServeContent(w, r, "name", d.ModTime(), f)
+	http.ServeContent(w, r, d.Name(), d.ModTime(), f)
 }
 
 // copy from http.toHTTPError
